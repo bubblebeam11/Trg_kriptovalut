@@ -113,6 +113,7 @@ def uvozi_trenutek(conn):
         """.format(', '.join(["?"] * len(stolpci)))
         for vrstica in podatki:
             conn.execute(poizvedba, vrstica)
+            
 def uvozi_tecaj(conn):
     """
     Uvozi podatke o osebah.
@@ -127,6 +128,7 @@ def uvozi_tecaj(conn):
         """.format(', '.join(["?"] * len(stolpci)))
         for vrstica in podatki:
             conn.execute(poizvedba, vrstica)
+
 def ustvari_bazo(conn):
     """
     Opravi celoten postopek postavitve baze.
