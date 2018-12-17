@@ -21,3 +21,14 @@ def commit(fun):
     return funkcija
 
 
+def mozne_valute():
+    """
+    Funkcija, ki vrne vse možne valute.
+    """
+    poizvedba = """
+        SELECT *
+        FROM kriptovaluta
+    """
+    print(conn.execute(poizvedba).fetchall())
+    return conn.execute(poizvedba).fetchall()
+#mozne_valute()
