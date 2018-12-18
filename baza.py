@@ -82,7 +82,6 @@ def uvozi_lastnistvo(conn):
             INSERT INTO lastnistvo VALUES (?,?,?,?,?,?)
         """
         for vrstica in podatki:
-            print(vrstica)
             conn.execute(poizvedba, vrstica)
 def uvozi_tecaj(conn):
     """
@@ -108,7 +107,7 @@ def uvozi_kriptovaluta(conn):
     conn.execute("DELETE FROM kriptovaluta;")
     with open('podatki/kriptovaluta.csv') as datoteka:
         podatki = csv.reader(datoteka)
-        
+        next(podatki)
         poizvedba = """
             INSERT INTO kriptovaluta VALUES (?,?,?)
         """
