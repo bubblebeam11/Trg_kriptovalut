@@ -6,4 +6,4 @@ Trg kriptovalut
 
 ## ER diagram
 
-![ER diagram](U:\Podatkovne baze\seminarska\Trg_kriptovalut\ER diagrami\Kriptovalute.png)
+![ER diagram](Kriptovalute.png)
