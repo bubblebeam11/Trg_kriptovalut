@@ -6,4 +6,4 @@ Trg kriptovalut
 
 ## ER diagram
 
-![ER diagram](ER diagrami/Kriptovalute.png)
+![ER diagram](Kriptovalute.png)
