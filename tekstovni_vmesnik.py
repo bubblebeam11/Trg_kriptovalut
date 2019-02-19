@@ -9,7 +9,6 @@ def pokazi_moznosti():
     print('Moznosti:')
     izbira = int(input(("""1 = Izpisi mozne kriptovalute\n2 = Narisi graf\n3 = Izpisi lastnistva\n""")))
     if izbira == 1:
-        
         valute = mozne_valute()
         i = 1
         for kripto in valute:

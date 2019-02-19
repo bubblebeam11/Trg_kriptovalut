@@ -2,6 +2,14 @@ import bottle
 import modeli
 @bottle.get('/')
 def glavna_stran():
-    return "Dobrodošli v bazi {} filmov in {} oseb!".format(modeli.stevilo_filmov,modeli.stevilo_oseb)
+    poizvedba = modeli.mozne_valute()
+    kriptovalute = [
+        (kriptovaluta[1],kriptovaluta[0],kriptovaluta[2])
+        for kriptovaluta in poizvedba
+    ]
+    return bottle.template(
+        'glavna_stran',
+        kriptovalute = kriptovalute)
+   
 
 bottle.run(reloader = True)
