@@ -5,9 +5,9 @@
 </form>
 
 <ul>
-% for kriptovaluta,kratica,leto in kriptovalute:
+% for kriptovaluta,kratica,leto,url in kriptovalute:
     <li>
-        <a>
+        <a href="{{ url }}">
             {{kriptovaluta}}({{kratica}}), Leto ustanovitve: {{leto}} 
         </a>
     </li>

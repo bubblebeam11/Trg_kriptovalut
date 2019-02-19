@@ -68,3 +68,13 @@ def mozne_valute():
         SELECT * from kriptovaluta
     """
     return conn.execute(poizvedba).fetchall()
+@post('/prijava/')
+def prijava():
+    uporabnisko_ime = request.forms.uporabnisko_ime
+    geslo = request.forms.geslo
+    if modeli.preveri_geslo(uporabnisko_ime, geslo):
+        bottle.response.set_cookie(
+            'prijavljen', 'da', secret=SKRIVNOST, path='/')
+        redirect('/')
+    else:
+        raise bottle.HTTPError(403, "BOOM!")
